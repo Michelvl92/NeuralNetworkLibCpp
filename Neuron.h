@@ -5,7 +5,6 @@
 	This file along with it's .cpp version is to be expanded by such methods.
 */
 
-#pragma once
 #include <cstdlib>
 #include <iostream>
 #include <vector>

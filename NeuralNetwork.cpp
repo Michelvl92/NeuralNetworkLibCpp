@@ -5,7 +5,7 @@ NeuralNetwork::NeuralNetwork(std::vector<int> layersDimensions) {
 
 	for (int layerNum = 0; layerNum < NeuralNetwork::__numOfLayers; layerNum++) {
 		std::vector<Neuron*> tmpLayer;
-		
+
 		int neuronsInPreviousLayer = 0;
 		if (layerNum != 0) neuronsInPreviousLayer = layersDimensions[layerNum - 1];
 
@@ -44,6 +44,7 @@ float* NeuralNetwork::feedForward(float* inputs) {
 		else {
 			// Feeding forward rest of the layers, one by one
 
+			std::cout << std::endl;
 			// Creating array of previous layer's outputs
 			int prevLayerSize = __layers[layerNum - 1].size();
 			float* inPrevLayer = new float[prevLayerSize];
@@ -56,7 +57,7 @@ float* NeuralNetwork::feedForward(float* inputs) {
 			for (unsigned int i = 0; i < __layers[layerNum].size(); i++) {
 				__layers[layerNum][i]->feedForward(inPrevLayer);
 			}
-			
+
 			delete[] inPrevLayer;
 		}
 	}

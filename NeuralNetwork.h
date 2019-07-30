@@ -14,7 +14,6 @@
 	*fully connected means all neurons from layer n-1 are connected to every each neuron in layer n.
 */
 
-#pragma once
 #include <cstdlib>
 #include <vector>
 #include <iostream>
